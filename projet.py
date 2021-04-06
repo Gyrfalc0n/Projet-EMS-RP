@@ -10,6 +10,9 @@ from datetime import datetime
 from tkinter import font
 import tkinter.font as tkFont
 from tkinter.constants import DISABLED, SOLID
+from tkinter.scrolledtext import *
+from tkinter import ttk
+from tkinter import scrolledtext
 
 all_index = 1.0
 SIZE_FONT = 20
@@ -87,6 +90,32 @@ class Toplevel1:
         def temps():
                 return projet_support.temps.get()
 
+        #setters
+
+        def set_conscience(value):
+                projet_support.conscience.set(value)
+        
+        def set_respi(value):
+                projet_support.respire.set(value)
+
+        def set_inter(value):
+                projet_support.inter.set(value)   
+        
+        def set_pup_taille(value):
+                projet_support.pup_taille.set(value)
+        
+        def set_pup_react(value):
+                projet_support.pup_react.set(value)
+
+        def set_pup_sym(value):
+                projet_support.pup_sym.set(value)
+
+        def set_espace(value):
+                projet_support.espace.set(value)
+
+        def set_temps(value):
+                projet_support.temps.set(value)
+
         # --------
 
         def log(text):
@@ -95,6 +124,19 @@ class Toplevel1:
                 now = datetime.now() # current date and time
                 date_time = now.strftime("%H:%M:%S > ")	
                 self.log.insert(all_index, date_time + text + '\n')
+                self.log.yview(all_index)
+                #check state of neuro 
+                if is_conscience() == 0:
+                        detresse_neuro()
+                else:
+                        self.Label1.configure(background="#c0c0c0")     
+                        self.Label1.configure(highlightcolor="black")
+                if is_respi() == 0:
+                        detresse_respi()
+                else:
+                        self.detresse_respi.configure(background="#c0c0c0")     
+                        self.detresse_respi.configure(highlightcolor="black")
+
 
         #TODO : tention basse comme tension haute possible en cas de detresse circu !
 
@@ -108,6 +150,13 @@ class Toplevel1:
                 random_number = int(str(random_number)[1:-1])
                 random_number2 = int(((random_number/2)*10 + 10) + random.randint(0,9))
                 random_number = random_number*10 + random.randint(0,9)
+                if random_number >= 145:
+                        self.tad_text.configure(foreground="red")
+                        detresse_circu()
+                else:
+                        self.detresse_circu.configure(background="#c0c0c0")     
+                        self.detresse_circu.configure(highlightcolor="black")
+                        self.tad_text.configure(foreground="black")
                 tension = str(random_number) + "/" + str(random_number2)
                 tension2 = "Mesure de la tension artérielle bras droit : " + str(random_number) + "/" + str(random_number2)
                 self.tad_text.delete(1.0,"end")
@@ -124,6 +173,13 @@ class Toplevel1:
                 random_number = int(str(random_number)[1:-1])
                 random_number2 = int(((random_number/2)*10 + 10) + random.randint(0,9))
                 random_number = random_number*10 + random.randint(0,9)
+                if random_number >= 145:
+                        self.tag_text.configure(foreground="red")
+                        detresse_circu()
+                else:
+                        self.tag_text.configure(foreground="black")
+                        self.detresse_circu.configure(background="#c0c0c0")     
+                        self.detresse_circu.configure(highlightcolor="black")
                 tension = str(random_number) + "/" + str(random_number2)
                 tension2 = "Mesure de la tension artérielle bras droit : " + str(random_number) + "/" + str(random_number2)
                 self.tag_text.delete(1.0,"end")
@@ -139,7 +195,6 @@ class Toplevel1:
                         proba = [0.05,0.10,0.2,0.3,0.35]
                 fc = random.choices(liste, proba)
                 fc = int(str(fc)[1:-1])
-                print(fr)
                 if fc == 40:
                         fc = random.randint(40,50)
                 if fc == 50:
@@ -153,6 +208,13 @@ class Toplevel1:
                 message = str(fc) + " bpm/min"
                 self.fc_text.delete(1.0,"end")
                 self.fc_text.insert(1.0, message)
+                if fc >= 100:
+                        self.fc_text.configure(foreground="red")
+                        detresse_circu()
+                else:
+                        self.fc_text.configure(foreground="black")
+                        self.detresse_circu.configure(background="#c0c0c0")     
+                        self.detresse_circu.configure(highlightcolor="black")
                 message = "Fréquence cardiaque mesurée à : " + message
                 log(message)
 
@@ -168,7 +230,6 @@ class Toplevel1:
                 else:
                         fr = random.choices(liste, proba)
                         fr = int(str(fr)[1:-1])
-                        print(fr)
                         if fr == 10:
                                 fr = random.randint(0,10)
                         if fr == 15:
@@ -179,7 +240,7 @@ class Toplevel1:
                                 fr = random.randint(20,25)
                         if fr == 30:
                                 fr = random.randint(25,35)
-                message = str(fr) + " mvmt/min"
+                message = str(fr) + " mv/min"
                 self.fr_text.delete(1.0,"end")
                 self.fr_text.insert(1.0, message)
                 message = "Fréquence respiratoire mesurée à : " + message
@@ -209,16 +270,31 @@ class Toplevel1:
                 self.sat_text.delete(1.0,"end")
                 self.sat_text.insert(1.0, message)
                 message = "SAT mesurée à : " + message
+                if sat <= 94:
+                        detresse_respi()
+                        self.sat_text.configure(foreground="red")
+                else:
+                        self.sat_text.configure(foreground="black")
+                        self.detresse_respi.configure(background="#c0c0c0")     
+                        self.detresse_respi.configure(highlightcolor="black")     
                 log(message)
 
         def detresse_circu():
-                print("")
+                self.detresse_circu.configure(background="#ff0000")     
+                self.detresse_circu.configure(highlightcolor="white")
         def detresse_respi():
-                print("")
+                self.detresse_respi.configure(background="#ff0000")     
+                self.detresse_respi.configure(highlightcolor="white")
         def detresse_neuro():
-                print("")
+                self.Label1.configure(background="#ff0000")     
+                self.Label1.configure(highlightcolor="white")
         def reset_detresses():
-                print("")
+                self.detresse_respi.configure(background="#c0c0c0")     
+                self.detresse_respi.configure(highlightcolor="black")
+                self.detresse_circu.configure(background="#c0c0c0")     
+                self.detresse_circu.configure(highlightcolor="black")
+                self.Label1.configure(background="#c0c0c0")     
+                self.Label1.configure(highlightcolor="black")
 
         # mesure trc
         def trc():
@@ -227,12 +303,65 @@ class Toplevel1:
                         self.trc_text.delete(1.0,"end")
                         self.trc_text.insert(1.0,">2 sec")
                         detresse_circu()
+                        self.trc_text.configure(foreground='red')
                 else:
                         message = "TRC inférieur à 2 secondes"
                         self.trc_text.delete(1.0,"end")
                         self.trc_text.insert(1.0,"<2 sec")
+                        self.trc_text.configure(foreground='black')
                 log(message)
 
+        def bilan_infos():
+                if inter() == 0:
+                        message = "Motif d'intervention : Malaise"
+                elif inter() == 1:
+                        message = "Motif d'intervention : Plaie simple"
+                elif inter() == 2:
+                        message = "Motif d'intervention : AVP"
+                elif inter() == 3:
+                        message = "Motif d'intervention : Plaie par balle"
+                elif inter() == 4:
+                        message = "Motif d'intervention : Plaie par arme blanche"
+                elif inter() == 5:
+                        message = "Motif d'intervention : Autre"
+                elif inter() == 6:
+                        message = "Motif d'intervention : Traumatisme"
+                log(message)
+                if is_conscience() == 1:
+                        message = "A l'arrivée des secours, victime consciente"
+                else:
+                        message = "A l'arrivée des secours, victime inconsciente"
+                log(message)
+                if is_respi() == 1:
+                        message = "A l'arrivée des secours, la victime respire"
+                else:
+                        message = "A l'arrivée des secours, la victime ne respire pas"
+                log(message)
+                if espace() == 1:
+                        message = "Victime orientée dans l'espace"
+                else:
+                        message = "Victime désorientée dans l'espace"
+                log(message)
+                if temps() == 1:
+                        message = "Victime orientée dans le temps"
+                else:
+                        message = "Victime désorientée dans le temps"
+                log(message)
+                if pup_taille() == 1:
+                        message = "Pupilles mydriase (dillatées)"
+                else:
+                        message = "Pupilles myosis (taille normale)"
+                log(message)
+                if pup_react() == 1:
+                        message = "Pupilles réactives"
+                else:
+                        message = "Pupilles non réactives"
+                log(message)
+                if pup_sym() == 1:
+                        message = "Pupilles symétriques"
+                else:
+                        message = "Pupilles non symétriques"
+                log(message)
         def envoyer():
                 message = ""
                 identite = self.identite_entry.get()
@@ -242,13 +371,13 @@ class Toplevel1:
                         
                 if tel != "":
                         message = message + " \t\t | \t\t" + "Téléphone : " + tel
+                bilan_infos()
                 log(message)
 
         def envoyer_log():
                 message = self.entry_log.get()
                 log(str(message))
                 self.entry_log.delete(0, 'end')
-                self.log.see("end")
 
 
         def new():
@@ -264,6 +393,14 @@ class Toplevel1:
                 self.trc_text.delete(1.0,"end")
                 self.entry_log.delete(0, 'end')
                 reset_detresses()
+                set_conscience(1)
+                set_respi(1)
+                set_espace(1)
+                set_temps(1)
+                set_inter(0)
+                set_pup_react(1)
+                set_pup_sym(1)
+                set_pup_taille(0)
 
 #-------------------------------------------------------------------------------------------------------------
 
@@ -333,7 +470,7 @@ class Toplevel1:
                 , bordermode='ignore')
         self.identite_entry.configure(background="white")
         self.identite_entry.configure(disabledforeground="#a3a3a3")
-        self.identite_entry.configure(font="TkFixedFont")
+        self.identite_entry.configure(font=("TkTextFont", 14))
         self.identite_entry.configure(foreground="#000000")
         self.identite_entry.configure(highlightbackground="#d9d9d9")
         self.identite_entry.configure(highlightcolor="black")
@@ -370,7 +507,7 @@ class Toplevel1:
                 , bordermode='ignore')
         self.tel_entry.configure(background="white")
         self.tel_entry.configure(disabledforeground="#a3a3a3")
-        self.tel_entry.configure(font="TkFixedFont")
+        self.tel_entry.configure(font=("TkTextFont", 14))
         self.tel_entry.configure(foreground="#000000")
         self.tel_entry.configure(highlightbackground="#d9d9d9")
         self.tel_entry.configure(highlightcolor="black")
@@ -500,7 +637,7 @@ class Toplevel1:
         self.sat_text.place(relx=0.05, rely=0.546, relheight=0.237
                 , relwidth=0.178, bordermode='ignore')
         self.sat_text.configure(background="white")
-        self.sat_text.configure(font="TkTextFont")
+        self.sat_text.configure(font=("TkTextFont", 16))
         self.sat_text.configure(foreground="black")
         self.sat_text.configure(highlightbackground="#d9d9d9")
         self.sat_text.configure(highlightcolor="black")
@@ -527,7 +664,7 @@ class Toplevel1:
         self.fr_text.place(relx=0.267, rely=0.546, relheight=0.237
                 , relwidth=0.178, bordermode='ignore')
         self.fr_text.configure(background="white")
-        self.fr_text.configure(font="TkTextFont")
+        self.fr_text.configure(font=("TkTextFont", 14))
         self.fr_text.configure(foreground="black")
         self.fr_text.configure(highlightbackground="#d9d9d9")
         self.fr_text.configure(highlightcolor="black")
@@ -622,7 +759,7 @@ class Toplevel1:
         self.tag_text.place(relx=0.064, rely=0.407, relheight=0.14
                 , relwidth=0.441, bordermode='ignore')
         self.tag_text.configure(background="white")
-        self.tag_text.configure(font="TkTextFont")
+        self.tag_text.configure(font=("TkTextFont", 14))
         self.tag_text.configure(foreground="black")
         self.tag_text.configure(highlightbackground="#d9d9d9")
         self.tag_text.configure(highlightcolor="black")
@@ -649,7 +786,7 @@ class Toplevel1:
         self.tad_text.place(relx=0.547, rely=0.407, relheight=0.14
                 , relwidth=0.408, bordermode='ignore')
         self.tad_text.configure(background="white")
-        self.tad_text.configure(font="TkTextFont")
+        self.tad_text.configure(font=("TkTextFont", 14))
         self.tad_text.configure(foreground="black")
         self.tad_text.configure(highlightbackground="#d9d9d9")
         self.tad_text.configure(highlightcolor="black")
@@ -676,7 +813,7 @@ class Toplevel1:
         self.fc_text.place(relx=0.064, rely=0.814, relheight=0.14, relwidth=0.441
                 , bordermode='ignore')
         self.fc_text.configure(background="white")
-        self.fc_text.configure(font="TkTextFont")
+        self.fc_text.configure(font=("TkTextFont", 14))
         self.fc_text.configure(foreground="black")
         self.fc_text.configure(highlightbackground="#d9d9d9")
         self.fc_text.configure(highlightcolor="black")
@@ -689,7 +826,7 @@ class Toplevel1:
         self.trc_text.place(relx=0.547, rely=0.814, relheight=0.14
                 , relwidth=0.408, bordermode='ignore')
         self.trc_text.configure(background="white")
-        self.trc_text.configure(font="TkTextFont")
+        self.trc_text.configure(font=("TkTextFont", 14))
         self.trc_text.configure(foreground="black")
         self.trc_text.configure(highlightbackground="#d9d9d9")
         self.trc_text.configure(highlightcolor="black")
@@ -1017,7 +1154,7 @@ class Toplevel1:
         self.inter_6.configure(value="6")
         self.inter_6.configure(variable=projet_support.inter)
 
-        self.log = tk.Text(top)
+        self.log = scrolledtext.ScrolledText(top)
         self.log.place(relx=0.016, rely=0.69, relheight=0.266, relwidth=0.966)
         self.log.configure(background="white")
         self.log.configure(font="TkTextFont")
@@ -1068,6 +1205,12 @@ class Toplevel1:
         self.Label2.configure(font="-family {Segoe UI} -size 9 -slant italic")
         self.Label2.configure(foreground="#000000")
         self.Label2.configure(text='''Gyrfalcon - version 1.0''')
+
+        # set default value at start
+        now = datetime.now() # current date and time
+        date_time = now.strftime("%d/%m/%y")	
+        log("Le " + date_time)
+        new()
 
 if __name__ == '__main__':
     vp_start_gui()
