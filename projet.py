@@ -118,6 +118,28 @@ class Toplevel1:
 
         # --------
 
+        def detresse_circu():
+                self.detresse_circu.configure(background="#ff0000")     
+                self.detresse_circu.configure(highlightcolor="white")
+        def detresse_respi():
+                self.detresse_respi.configure(background="#ff0000")     
+                self.detresse_respi.configure(highlightcolor="white")
+        def reset_detresse_respi():
+                self.detresse_respi.configure(background="#c0c0c0")     
+                self.detresse_respi.configure(highlightcolor="black")
+        def detresse_neuro():
+                self.Label1.configure(background="#ff0000")     
+                self.Label1.configure(highlightcolor="white")
+        def reset_detresses():
+                self.detresse_respi.configure(background="#c0c0c0")     
+                self.detresse_respi.configure(highlightcolor="black")
+                self.detresse_circu.configure(background="#c0c0c0")     
+                self.detresse_circu.configure(highlightcolor="black")
+                self.Label1.configure(background="#c0c0c0")     
+                self.Label1.configure(highlightcolor="black")
+
+        # --------
+
         def log(text):
                 global all_index
                 all_index += 1
@@ -133,9 +155,6 @@ class Toplevel1:
                         self.Label1.configure(highlightcolor="black")
                 if is_respi() == 0:
                         detresse_respi()
-                else:
-                        self.detresse_respi.configure(background="#c0c0c0")     
-                        self.detresse_respi.configure(highlightcolor="black")
 
 
         #TODO : tention basse comme tension haute possible en cas de detresse circu !
@@ -266,35 +285,17 @@ class Toplevel1:
                         sat = random.randint(83,87)
                 if sat == 80:
                         sat = random.randint(80,83)
+                if sat <= 94:
+                        self.sat_text.configure(foreground="red")
+                        detresse_respi()
+                else:
+                        self.sat_text.configure(foreground="black")
+                        reset_detresse_respi()
                 message = str(sat) + "%"
                 self.sat_text.delete(1.0,"end")
                 self.sat_text.insert(1.0, message)
-                message = "SAT mesurée à : " + message
-                if sat <= 94:
-                        detresse_respi()
-                        self.sat_text.configure(foreground="red")
-                else:
-                        self.sat_text.configure(foreground="black")
-                        self.detresse_respi.configure(background="#c0c0c0")     
-                        self.detresse_respi.configure(highlightcolor="black")     
+                message = "SAT mesurée à : " + message   
                 log(message)
-
-        def detresse_circu():
-                self.detresse_circu.configure(background="#ff0000")     
-                self.detresse_circu.configure(highlightcolor="white")
-        def detresse_respi():
-                self.detresse_respi.configure(background="#ff0000")     
-                self.detresse_respi.configure(highlightcolor="white")
-        def detresse_neuro():
-                self.Label1.configure(background="#ff0000")     
-                self.Label1.configure(highlightcolor="white")
-        def reset_detresses():
-                self.detresse_respi.configure(background="#c0c0c0")     
-                self.detresse_respi.configure(highlightcolor="black")
-                self.detresse_circu.configure(background="#c0c0c0")     
-                self.detresse_circu.configure(highlightcolor="black")
-                self.Label1.configure(background="#c0c0c0")     
-                self.Label1.configure(highlightcolor="black")
 
         # mesure trc
         def trc():
