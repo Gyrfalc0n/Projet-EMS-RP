@@ -1,4 +1,5 @@
 theme: jekyll-theme-cayman
-title: Projet EMS RP - Gyrfalcon
+title: Projet EMS RP
 description: Logiciel pour influencer le RP EMS avec des données médicales aléatoires suivant la situation !
-author: Gyrfalc0n 
+author: Gyrfalc0n
+cover-img: "https://github.com/Gyrfalc0n/Projet-EMS-RP/blob/main/images/cover.png"
