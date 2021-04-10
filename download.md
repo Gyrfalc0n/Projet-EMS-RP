@@ -4,5 +4,30 @@ title: Contact
 subtitle: S'il vous prend l'idée de me contacter
 ---
 
+_Projet EMS RP_ est disponible uniquement sur **Windows** et en **français**.
 
-On peut donc l'utiliser dans tous les jeux RP, _GTA 5_, _Arma 3_, _Garry's Mod_, etc. Le logiciel est en français. 
+_Il est possible que votre navigateur vous avertisse avant de télécharger le fichier puisque c'est un executable et qu'il ne le connaît pas._
+
+## Télécharger Projet EMS RP
+
+Dernière version (**BETA**) : [Télécharger](https://github.com/Gyrfalc0n/Projet-EMS-RP/releases/download/BETA/Projet.EMS.RP.by.Gyrfalcon.-.BETA.version.exe).
+
+_Toutes les release (versions)_ : [Release](https://github.com/Gyrfalc0n/Projet-EMS-RP/releases).
+
+-----
+
+### Changelog
+
+```markdown
+
+# Version BETA (10/04/2021)
+
+- Type d'intervention
+- Identité et numéro de la victime
+- Conscience et respiration
+- Bilan respiratoire, circulatoire et neurologique
+- Mesures de la SAT, Tension Gauche, Droite, TRC, fréquence cardiaque et respiratoire
+- Appréciation des pupilles
+- Journalisation des résultats
+
+```
