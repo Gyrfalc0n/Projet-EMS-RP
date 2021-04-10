@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Contact
-subtitle: S'il vous prend l'idée de me contacter
+title: Télécharger
+subtitle: Toutes les informations utiles pour commencer à utiliser le logiciel
 ---
 
 _Projet EMS RP_ est disponible uniquement sur **Windows** et en **français**.
