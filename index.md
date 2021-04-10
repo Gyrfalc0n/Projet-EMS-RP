@@ -8,11 +8,16 @@ _Projet EMS RP_ est un projet développé par Gyrfalcon dont l'objectif est d'ê
 
 ![Logiciel](https://ems.gyrfalcon.fr/images/preview2.png){: style="float: left"}
 
+
 ### Origine du projet
 
 L'idée vient du constat que j'ai pu faire sur la plupart des jeux et serveurs rôle-play sur lesquels j'ai joué, de la faiblesse du rôle-play français médical et surtout pré-hostpitalier.
 
 Ce petit logiciel s'adresse à tous ceux qui souhaitent **enrichir leur RP d'interventions médicales**. Il agit comme un compagnon de RP, et sert lors des interventions et des prises en charges. 
+
+
+
+
 
 
 ### Utilisation
