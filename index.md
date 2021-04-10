@@ -18,7 +18,7 @@ On peut donc l'utiliser dans tous les jeux RP, _GTA 5_, _Arma 3_, _Garry's Mod_,
 
 
 
-![Logiciel](https://ems.gyrfalcon.fr/images/preview.png)
+![Logiciel](https://ems.gyrfalcon.fr/images/preview.png){: style="float: left"}
 
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
