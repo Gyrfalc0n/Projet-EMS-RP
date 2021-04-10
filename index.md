@@ -8,7 +8,7 @@ _Projet EMS RP_ est un projet développé par Gyrfalcon dont l'objectif est d'ê
 
 -----
 
-![Logiciel[(https://ems.gyrfalcon.fr/images/preview2.png){: style="float: left"}
+![Logiciel](https://ems.gyrfalcon.fr/images/preview2.png){: style="float: left"}
 
 
 ### Origine du projet
@@ -17,9 +17,6 @@ L'idée vient du constat que j'ai pu faire sur la plupart des jeux et serveurs r
 
 Ce petit logiciel s'adresse à tous ceux qui souhaitent **enrichir leur RP d'interventions médicales**. Il agit comme un compagnon de RP, et sert lors des interventions et des prises en charges. 
 
-#
-
-#
 
 
 ### Utilisation
@@ -30,5 +27,5 @@ Ces informations délivrées dépendent de la situation spécifiée, c'est à di
 
 Par exemple, une plaie par balle aura plus de chance d'influer sur les informations circulatoires de la victime, voire jusqu'à donner des informations montrant une détresse circulatoire. Les seules informations à rentrer dans le logiciel pour paramétrer les résultats en sortie sont la conscience de la victime, si elle respire ainsi que le motif d'intervention.
 
-Pour plus de détails : [Informations[(https://ems.gyrfalcon.fr/informations)
+Pour plus de détails : [Informations](https://ems.gyrfalcon.fr/informations)
 
