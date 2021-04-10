@@ -138,7 +138,6 @@ class Toplevel1:
                 global is_detresse_circu
                 if is_detresse_circu1 == 1 or is_detresse_circu2 == 1 or is_detresse_circu3 == 1 or is_detresse_circu4 == 1:
                         is_detresse_circu = 1
-                        print("detresse circu")
                 else:
                         is_detresse_circu = 0
 
@@ -146,7 +145,6 @@ class Toplevel1:
                 global is_detresse_respi
                 if is_detresse_respi1 == 1 or is_detresse_respi2 == 1 or is_detresse_respi3 == 1:
                         is_detresse_respi = 1
-                        print("detresse respi")
                 else:
                         is_detresse_respi = 0
 
@@ -154,7 +152,6 @@ class Toplevel1:
                 global is_detresse_neuro
                 if is_detresse_neuro == 1:
                         is_detresse_neuro = 1
-                        print("detresse neuro")
                 else:
                         is_detresse_neuro = 0
 
@@ -1277,18 +1274,6 @@ class Toplevel1:
         self.inter_6.configure(value="6")
         self.inter_6.configure(variable=projet_support.inter)
 
-        self.log = scrolledtext.ScrolledText(top)
-        self.log.place(relx=0.016, rely=0.69, relheight=0.266, relwidth=0.966)
-        self.log.configure(background="white")
-        self.log.configure(font="TkTextFont")
-        self.log.configure(foreground="black")
-        self.log.configure(highlightbackground="#d9d9d9")
-        self.log.configure(highlightcolor="black")
-        self.log.configure(insertbackground="black")
-        self.log.configure(selectbackground="blue")
-        self.log.configure(selectforeground="white")
-        self.log.configure(wrap="word")
-
         self.entry_log = tk.Entry(top)
         self.entry_log.place(relx=0.097, rely=0.962, height=20, relwidth=0.747)
         self.entry_log.configure(background="white")
@@ -1329,8 +1314,8 @@ class Toplevel1:
         self.Label2.configure(foreground="#000000")
         self.Label2.configure(text='''Gyrfalcon - version 1.0''')
 
-        self.log = tk.Text(top)
-        self.log.place(relx=0.016, rely=0.69, relheight=0.259, relwidth=0.628)
+        self.log = scrolledtext.ScrolledText(top)
+        self.log.place(relx=0.016, rely=0.69, relheight=0.259, relwidth=0.628) #628
         self.log.configure(background="white")
         self.log.configure(font="TkTextFont")
         self.log.configure(foreground="black")
