@@ -7,10 +7,9 @@
 
 # Name of website
 title: Projet EMS RP
+
 subtitle: "Logiciel d'aide au rôle-play EMS en donnant des données médicales aléatoires en fonction de la situation"
-
 cover-img: "/images/cover.png"
-
 gh-repo: gyrfalc0n/projet-rp-ems
 
 # Your name to show in the footer
@@ -19,7 +18,7 @@ author: Gyrfalcon
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  #About Me: "aboutme"
+  Contact: "aboutme"
   #Resources:
     #- Beautiful Jekyll: "https://beautifuljekyll.com"
     #- Learn markdown: "https://www.markdowntutorial.com/"
@@ -46,9 +45,9 @@ title-img: /images/title.png
 social-network-links:
   #email: "someone@example.com"
   #facebook: deanattali
-  github: daattali
+  github: gyrfalc0n
   #twitter: daattali
-  discord: gyrfalcon
+#  discord: gyrfalcon
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
@@ -101,9 +100,9 @@ feed_show_tags: true
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
+navbar-col: "#C90E0E"
+navbar-text-col: "#FFFFFF"
+navbar-border-col: "#000000"
 page-col: "#FFFFFF"
 text-col: "#404040"
 link-col: "#008AFF"
