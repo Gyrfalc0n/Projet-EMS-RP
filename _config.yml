@@ -8,21 +8,24 @@
 # Name of website
 title: Projet EMS RP
 
-subtitle: "Logiciel d'aide au rôle-play EMS en donnant des données médicales aléatoires en fonction de la situation"
-cover-img: "/images/cover.png"
-gh-repo: gyrfalc0n/projet-rp-ems
-
 # Your name to show in the footer
 author: Gyrfalcon
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Contact: "aboutme"
+  Téléchargement: "download"
+  Fonctionnement: 
+    - Général: "general"
+    - Bilan respiratoire: "respiratoire"
+    - Bilan circulatoire: "circulatoire"
+    - Bilan neurologique: "neurologique"
+  Contact: "contact"
+  Code Source: "https://github.com/Gyrfalc0n/projet-ems-rp"
   #Resources:
     #- Beautiful Jekyll: "https://beautifuljekyll.com"
     #- Learn markdown: "https://www.markdowntutorial.com/"
-  Gyrfalcon: "https://github.com/Gyrfalc0n"
+  
 
 # --- Logo --- #
 
@@ -77,7 +80,6 @@ share-links-active:
   twitter: false
   facebook: false
   linkedin: false
-  discord: true
   vk: false
 
 # How to display the link to your website in the footer
@@ -106,7 +108,7 @@ navbar-border-col: "#000000"
 page-col: "#FFFFFF"
 text-col: "#404040"
 link-col: "#008AFF"
-hover-col: "#0085A1"
+hover-col: "#07C0DA"
 footer-col: "#EAEAEA"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
