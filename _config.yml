@@ -16,6 +16,7 @@ author: Gyrfalcon
 navbar-links:
   Télécharger: "download"
   Infos: "informations"
+  Bug Report: "https://github.com/Gyrfalc0n/Projet-EMS-RP/issues"
   Code: "https://github.com/Gyrfalc0n/projet-ems-rp"
   #Resources:
     #- Beautiful Jekyll: "https://beautifuljekyll.com"

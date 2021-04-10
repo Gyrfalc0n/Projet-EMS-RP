@@ -33,5 +33,6 @@ Historique des versions et des modifications.
 - Bilan respiratoire, circulatoire et neurologique
 - Mesures de la SAT, Tension Gauche, Droite, TRC, fréquence cardiaque et respiratoire
 - Appréciation des pupilles
+- Indicateur de détresses vitales
 - Journalisation des résultats
 ```
