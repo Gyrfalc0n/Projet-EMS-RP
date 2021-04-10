@@ -1,30 +1,19 @@
-## PROJET EMS RP
+---
+layout: page
+title: Projet EMS RP
+subtitle: Logiciel compagnon pour le rôle-play
+---
 
-You can use the [editor on GitHub](https://github.com/Gyrfalc0n/Projet-EMS-RP/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Projet EMS RP
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+"Projet EMS RP" est un projet développé par Gyrfalcon dont l'objectif est d'être utilisé comme aide médicale pour tous les types de rôle-play contenant des interventions d'urgence.
 
-### Markdown
+### Qu'est ce que c'est concrètement ?
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+![Image](src)
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
