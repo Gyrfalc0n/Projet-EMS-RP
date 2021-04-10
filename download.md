@@ -16,6 +16,10 @@ _Toutes les release (versions)_ : [Release](https://github.com/Gyrfalc0n/Projet-
 
 -----
 
+Pour comprendre l'importance des mesures données par le logiciel d'un point de vue médical, et apprendre à utiliser le logiciel ainsi que son fonctionnement :[Informations](https://ems.gyrfalcon.fr/informations).
+
+-----
+
 ## Changelog
 
 Historique des versions et des modifications.
@@ -23,9 +27,6 @@ Historique des versions et des modifications.
 ### Version BETA (10/04/2021)
 
 ```markdown
-
-
-
 - Type d'intervention
 - Identité et numéro de la victime
 - Conscience et respiration
@@ -33,5 +34,4 @@ Historique des versions et des modifications.
 - Mesures de la SAT, Tension Gauche, Droite, TRC, fréquence cardiaque et respiratoire
 - Appréciation des pupilles
 - Journalisation des résultats
-
 ```
