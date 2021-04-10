@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: Projet EMS RP par Gyrfalcon
 subtitle: Logiciel compagnon pour le rôle-play d'intervention de secours
 ---
