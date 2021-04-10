@@ -4,7 +4,7 @@ title: Projet EMS RP
 subtitle: Logiciel compagnon pour le rôle-play
 ---
 
-## Origine du projet
+### Origine du projet
 
 _Projet EMS RP_ est un projet développé par Gyrfalcon dont l'objectif est d'être utilisé comme aide médicale pour tous les types de rôle-play contenant des interventions d'urgence.
 
@@ -18,7 +18,7 @@ On peut donc l'utiliser dans tous les jeux RP, _GTA 5_, _Arma 3_, _Garry's Mod_,
 
 
 
-![Image](src)
+![Logiciel](images/preview)
 
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
