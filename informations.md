@@ -1,7 +1,7 @@
 ---
 layout: home
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: Informations
+subtitle: Apprendre et comprendre les informations médicales du logiciel
 ---
 
 My name is Inigo Montoya. I have the following qualities:

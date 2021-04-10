@@ -1,7 +1,7 @@
 ---
 layout: home
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: Contact
+subtitle: S'il vous prend l'idée de me contacter
 ---
 
 My name is Inigo Montoya. I have the following qualities:
