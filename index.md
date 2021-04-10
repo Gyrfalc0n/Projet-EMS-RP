@@ -6,6 +6,8 @@ subtitle: Logiciel compagnon pour le rôle-play d'intervention de secours
 
 _Projet EMS RP_ est un projet développé par Gyrfalcon dont l'objectif est d'être utilisé comme aide médicale pour tous les types de rôle-play contenant des interventions d'urgence.
 
+-----
+
 ![Logiciel[(https://ems.gyrfalcon.fr/images/preview2.png){: style="float: left"}
 
 
