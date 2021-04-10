@@ -16,7 +16,7 @@ _Toutes les release (versions)_ : [Release](https://github.com/Gyrfalc0n/Projet-
 
 -----
 
-Pour comprendre l'importance des mesures données par le logiciel d'un point de vue médical, et apprendre à utiliser le logiciel ainsi que son fonctionnement :[Informations](https://ems.gyrfalcon.fr/informations).
+Pour comprendre l'importance des mesures données par le logiciel d'un point de vue médical, et apprendre à utiliser le logiciel ainsi que son fonctionnement : [Informations](https://ems.gyrfalcon.fr/informations).
 
 -----
 
