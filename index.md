@@ -4,7 +4,7 @@ title: Projet EMS RP
 subtitle: Logiciel compagnon pour le rôle-play d'intervention de secours
 ---
 
-_Projet EMS RP_ est un projet développé par Gyrfalcon dont l'objectif est d'être utilisé comme aide médicale pour tous les types de rôle-play contenant des interventions d'urgence.
+_Projet EMS RP_ est un projet _open-source_ développé par Gyrfalcon dont l'objectif est d'être utilisé comme aide médicale pour tous les types de rôle-play contenant des interventions d'urgence.
 
 -----
 
@@ -27,7 +27,7 @@ Ces informations délivrées dépendent de la situation spécifiée, c'est à di
 
 Par exemple, une plaie par balle aura plus de chance d'influer sur les informations circulatoires de la victime, voire jusqu'à donner des informations montrant une détresse circulatoire. Les seules informations à rentrer dans le logiciel pour paramétrer les résultats en sortie sont la conscience de la victime, si elle respire ainsi que le motif d'intervention.
 
-Pour comprendre l'importance des mesures données par le logiciel d'un point de vue médical, et apprendre à utiliser le logiciel ainsi que son fonctionnement :[Informations](https://ems.gyrfalcon.fr/informations).
+Pour comprendre l'importance des mesures données par le logiciel d'un point de vue médical, et apprendre à utiliser le logiciel ainsi que son fonctionnement : [Informations](https://ems.gyrfalcon.fr/informations).
 
-Obtenir _Projet EMS RP_ :[Télécharger](https://ems.gyrfalcon.fr/download).
+Obtenir _Projet EMS RP_ : [Télécharger](https://ems.gyrfalcon.fr/download).
 
