@@ -27,5 +27,6 @@ Ces informations délivrées dépendent de la situation spécifiée, c'est à di
 
 Par exemple, une plaie par balle aura plus de chance d'influer sur les informations circulatoires de la victime, voire jusqu'à donner des informations montrant une détresse circulatoire. Les seules informations à rentrer dans le logiciel pour paramétrer les résultats en sortie sont la conscience de la victime, si elle respire ainsi que le motif d'intervention.
 
-Pour plus de détails : [Informations](https://ems.gyrfalcon.fr/informations)
+Pour plus de détails : [Informations](https://ems.gyrfalcon.fr/informations).
+Obtenir _Projet EMS RP_ :[Télécharger](https://ems.gyrfalcon.fr/download).
 

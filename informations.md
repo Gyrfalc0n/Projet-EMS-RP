@@ -4,3 +4,4 @@ title: Informations
 subtitle: Apprendre et comprendre les informations médicales du logiciel
 ---
 
+## A VENIR
