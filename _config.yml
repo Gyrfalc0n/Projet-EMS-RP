@@ -14,14 +14,9 @@ author: Gyrfalcon
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Téléchargement: "download"
-  Fonctionnement: 
-    - Général: "general"
-    - Bilan respiratoire: "respiratoire"
-    - Bilan circulatoire: "circulatoire"
-    - Bilan neurologique: "neurologique"
-  Contact: "contact"
-  Code Source: "https://github.com/Gyrfalc0n/projet-ems-rp"
+  Télécharger: "download"
+  Infos: "informations"
+  Code: "https://github.com/Gyrfalc0n/projet-ems-rp"
   #Resources:
     #- Beautiful Jekyll: "https://beautifuljekyll.com"
     #- Learn markdown: "https://www.markdowntutorial.com/"
@@ -108,7 +103,7 @@ navbar-border-col: "#000000"
 page-col: "#FFFFFF"
 text-col: "#404040"
 link-col: "#008AFF"
-hover-col: "#07C0DA"
+hover-col: "#0EC90E"
 footer-col: "#EAEAEA"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
