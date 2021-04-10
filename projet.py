@@ -14,8 +14,24 @@ from tkinter.scrolledtext import *
 from tkinter import ttk
 from tkinter import scrolledtext
 
+# VARIABLES DE CONFIGURATION
 all_index = 1.0
 SIZE_FONT = 20
+DELAI = 1000
+
+# VARIABLES DE FONCTIONNEMENT
+is_detresse_respi1 = 0 # respirer
+is_detresse_respi2 = 0 # sat
+is_detresse_respi3 = 0 # FR
+is_detresse_neuro = 0 # conscience
+is_detresse_circu1 = 0 # FC
+is_detresse_circu2 = 0 # TAG
+is_detresse_circu3 = 0 # TAD
+is_detresse_circu4 = 0 # TRC
+
+is_detresse_circu = 0
+is_detresse_neuro = 0
+is_detresse_respi = 0
 
 try:
     import Tkinter as tk
@@ -116,20 +132,63 @@ class Toplevel1:
         def set_temps(value):
                 projet_support.temps.set(value)
 
-        # FONCTIONS UTILISATION
+        # detresses
 
         def detresse_circu():
-                self.detresse_circu.configure(background="#ff0000")     
-                self.detresse_circu.configure(highlightcolor="white")
+                global is_detresse_circu
+                if is_detresse_circu1 == 1 or is_detresse_circu2 == 1 or is_detresse_circu3 == 1 or is_detresse_circu4 == 1:
+                        is_detresse_circu = 1
+                        print("detresse circu")
+                else:
+                        is_detresse_circu = 0
+
         def detresse_respi():
-                self.detresse_respi.configure(background="#ff0000")     
-                self.detresse_respi.configure(highlightcolor="white")
-        def reset_detresse_respi():
-                self.detresse_respi.configure(background="#c0c0c0")     
-                self.detresse_respi.configure(highlightcolor="black")
+                global is_detresse_respi
+                if is_detresse_respi1 == 1 or is_detresse_respi2 == 1 or is_detresse_respi3 == 1:
+                        is_detresse_respi = 1
+                        print("detresse respi")
+                else:
+                        is_detresse_respi = 0
+
         def detresse_neuro():
-                self.Label1.configure(background="#ff0000")     
-                self.Label1.configure(highlightcolor="white")
+                global is_detresse_neuro
+                if is_detresse_neuro == 1:
+                        is_detresse_neuro = 1
+                        print("detresse neuro")
+                else:
+                        is_detresse_neuro = 0
+
+        def blink_respi():
+                if is_detresse_respi == 1:
+                        if self.detresse_respi.cget("background") == "#c0c0c0":
+                                self.detresse_respi.configure(background="#ff0000")     
+                                self.detresse_respi.configure(highlightcolor="white")
+                        else:
+                                self.detresse_respi.configure(background="#c0c0c0")     
+                                self.detresse_respi.configure(highlightcolor="black")
+                root.after(DELAI, blink_respi)
+
+        def blink_neuro():
+                if is_detresse_neuro == 1:
+                        if self.Label1.cget("background") == "#c0c0c0":
+                                self.Label1.configure(background="#ff0000")     
+                                self.Label1.configure(highlightcolor="white")       
+                        else:
+                                self.Label1.configure(background="#c0c0c0")     
+                                self.Label1.configure(highlightcolor="black")
+                root.after(DELAI, blink_neuro)
+
+        def blink_circu():
+                if is_detresse_circu == 1:
+                        if self.detresse_circu.cget("background") == "#c0c0c0":
+                                self.detresse_circu.configure(background="#ff0000")     
+                                self.detresse_circu.configure(highlightcolor="white") 
+                        else:
+                                self.detresse_circu.configure(background="#c0c0c0")     
+                                self.detresse_circu.configure(highlightcolor="black")
+                root.after(DELAI, blink_circu)
+
+
         def reset_detresses():
                 self.detresse_respi.configure(background="#c0c0c0")     
                 self.detresse_respi.configure(highlightcolor="black")
@@ -137,11 +196,22 @@ class Toplevel1:
                 self.detresse_circu.configure(highlightcolor="black")
                 self.Label1.configure(background="#c0c0c0")     
                 self.Label1.configure(highlightcolor="black")
+                global is_detresse_respi
+                global is_detresse_circu
+                global is_detresse_neuro
+                is_detresse_respi = 0
+                is_detresse_circu = 0
+                is_detresse_neuro = 0
+                detresse_respi()
+                detresse_circu()
+                detresse_neuro()
 
         # FONCTION LOG
 
         def log(text):
                 global all_index
+                global is_detresse_neuro
+                global is_detresse_respi1
                 all_index += 1
                 now = datetime.now() # current date and time
                 date_time = now.strftime("%H:%M:%S > ")	
@@ -149,32 +219,36 @@ class Toplevel1:
                 self.log.yview(all_index)
                 #check state of neuro 
                 if is_conscience() == 0:
-                        detresse_neuro()
+                        is_detresse_neuro = 1
                 else:
                         self.Label1.configure(background="#c0c0c0")     
                         self.Label1.configure(highlightcolor="black")
+                        is_detresse_neuro = 0
                 if is_respi() == 0:
-                        detresse_respi()
-
+                        is_detresse_respi1 = 1
+                else:
+                        is_detresse_respi1 = 0
+                detresse_respi()
+                detresse_neuro()
+                detresse_circu() #juste au cas ou
 
         #TODO : tention basse comme tension haute possible en cas de detresse circu !
 
         def tad():
+                global is_detresse_circu3
                 a_list = [7,8,9,10,11,12,13,14,15,16,17,18,19]
                 distribution = [0.00326 , 0.00652 , 0.0125 , 0.025 , 0.15 , 0.5 , 0.15 , 0.075 , 0.0375 , 0.0175 , 0.015 , 0.003 , 0.00146]
                 if inter() == 2 or inter() == 3 or inter() == 4 or inter() == 6:
                         distribution = distribution.reverse()
-                        detresse_circu()
                 random_number = random.choices(a_list, distribution)
                 random_number = int(str(random_number)[1:-1])
                 random_number2 = int(((random_number/2)*10 + 10) + random.randint(0,9))
                 random_number = random_number*10 + random.randint(0,9)
                 if random_number >= 145:
                         self.tad_text.configure(foreground="red")
-                        detresse_circu()
+                        is_detresse_circu3 = 1
                 else:
-                        self.detresse_circu.configure(background="#c0c0c0")     
-                        self.detresse_circu.configure(highlightcolor="black")
+                        is_detresse_circu3 = 0
                         self.tad_text.configure(foreground="black")
                 tension = str(random_number) + "/" + str(random_number2)
                 tension2 = "Mesure de la tension artérielle bras droit : " + str(random_number) + "/" + str(random_number2)
@@ -183,22 +257,21 @@ class Toplevel1:
                 log(tension2)
 
         def tag():
+                global is_detresse_circu2
                 a_list = [7,8,9,10,11,12,13,14,15,16,17,18,19]
                 distribution = [0.00326 , 0.00652, 0.0125 , 0.025 , 0.15 , 0.5 , 0.15 , 0.075 , 0.0375 , 0.0175 , 0.015 , 0.003 , 0.00146]
                 if inter() == 2 or inter() == 3 or inter() == 4 or inter() == 6:
                         distribution = distribution.reverse()
-                        detresse_circu()
                 random_number = random.choices(a_list, distribution)
                 random_number = int(str(random_number)[1:-1])
                 random_number2 = int(((random_number/2)*10 + 10) + random.randint(0,9))
                 random_number = random_number*10 + random.randint(0,9)
                 if random_number >= 145:
                         self.tag_text.configure(foreground="red")
-                        detresse_circu()
+                        is_detresse_circu2 = 1
                 else:
                         self.tag_text.configure(foreground="black")
-                        self.detresse_circu.configure(background="#c0c0c0")     
-                        self.detresse_circu.configure(highlightcolor="black")
+                        is_detresse_circu2 = 0
                 tension = str(random_number) + "/" + str(random_number2)
                 tension2 = "Mesure de la tension artérielle bras droit : " + str(random_number) + "/" + str(random_number2)
                 self.tag_text.delete(1.0,"end")
@@ -207,10 +280,10 @@ class Toplevel1:
 
        #mesure fréquence cardiaque
         def fc():
+                global is_detresse_circu1
                 liste = [40,50,60,80,100]
                 proba = [0.05,0.15,0.15,0.5,0.15]
                 if inter() == 2 or inter() == 3 or inter() == 4 or inter() == 6:
-                        detresse_circu()
                         proba = [0.05,0.10,0.2,0.3,0.35]
                 fc = random.choices(liste, proba)
                 fc = int(str(fc)[1:-1])
@@ -229,11 +302,10 @@ class Toplevel1:
                 self.fc_text.insert(1.0, message)
                 if fc >= 100:
                         self.fc_text.configure(foreground="red")
-                        detresse_circu()
+                        is_detresse_circu1 = 1
                 else:
                         self.fc_text.configure(foreground="black")
-                        self.detresse_circu.configure(background="#c0c0c0")     
-                        self.detresse_circu.configure(highlightcolor="black")
+                        is_detresse_circu1 = 0
                 message = "Fréquence cardiaque mesurée à : " + message
                 log(message)
 
@@ -241,12 +313,16 @@ class Toplevel1:
 
         #mesure fréquence respiratoire
         def fr():
+                global is_detresse_respi1
                 liste = [10,15,20,25,30]
                 proba = [0.05,0.15,0.15,0.5,0.15]
                 if is_respi() == 0:
-                        detresse_respi()
+                        is_detresse_respi1 = 1
                         fr = 0
+                        self.fr_text.configure(foreground="red")
                 else:
+                        self.fr_text.configure(foreground="black")
+                        is_detresse_respi1 = 0
                         fr = random.choices(liste, proba)
                         fr = int(str(fr)[1:-1])
                         if fr == 10:
@@ -267,6 +343,7 @@ class Toplevel1:
 
         #mesure saturation pulsatile o2
         def sat():
+                global is_detresse_respi2
                 liste = [80,83,87,90,93,96]
                 proba = [0.00625,0.00625 ,0.0125 ,0.025 , 0.05, 0.9]
                 if is_respi() == 0:
@@ -287,10 +364,10 @@ class Toplevel1:
                         sat = random.randint(80,83)
                 if sat <= 94:
                         self.sat_text.configure(foreground="red")
-                        detresse_respi()
+                        is_detresse_respi2 = 1
                 else:
                         self.sat_text.configure(foreground="black")
-                        reset_detresse_respi()
+                        is_detresse_respi2 = 0
                 message = str(sat) + "%"
                 self.sat_text.delete(1.0,"end")
                 self.sat_text.insert(1.0, message)
@@ -299,13 +376,15 @@ class Toplevel1:
 
         # mesure trc
         def trc():
+                global is_detresse_circu4
                 if inter() == 2 or inter() == 3 or inter() == 4 or inter() == 6:
                         message = "TRC supérieur à 2 secondes"
                         self.trc_text.delete(1.0,"end")
                         self.trc_text.insert(1.0,">2 sec")
-                        detresse_circu()
+                        is_detresse_circu4 = 1
                         self.trc_text.configure(foreground='red')
                 else:
+                        is_detresse_circu4 = 0
                         message = "TRC inférieur à 2 secondes"
                         self.trc_text.delete(1.0,"end")
                         self.trc_text.insert(1.0,"<2 sec")
@@ -383,6 +462,17 @@ class Toplevel1:
 
 
         def new():
+                global is_detresse_respi1
+                global is_detresse_respi2
+                global is_detresse_respi3
+                global is_detresse_neuro
+                global is_detresse_circu1
+                global is_detresse_circu2
+                global is_detresse_circu3
+                global is_detresse_circu4
+                global is_detresse_circu
+                global is_detresse_neuro
+                global is_detresse_respi
                 message = "------------------ Nouvelle victime ------------------"
                 log(message)
                 self.tel_entry.delete(0,'end')
@@ -403,48 +493,38 @@ class Toplevel1:
                 set_pup_react(1)
                 set_pup_sym(1)
                 set_pup_taille(0)
+                is_detresse_respi1 = 0 # respirer
+                is_detresse_respi2 = 0 # sat
+                is_detresse_respi3 = 0 # FR
+                is_detresse_neuro = 0 # conscience
+                is_detresse_circu1 = 0 # FC
+                is_detresse_circu2 = 0 # TAG
+                is_detresse_circu3 = 0 # TAD
+                is_detresse_circu4 = 0 # TRC
+                is_detresse_circu = 0
+                is_detresse_neuro = 0
+                is_detresse_respi = 0
 
         def option1():
-                print('projet_support.option1')
-                sys.stdout.flush()
-
+                a=1
         def option2():
-                print('projet_support.option2')
-                sys.stdout.flush()
-
+                a=1
         def option3():
-                print('projet_support.option3')
-                sys.stdout.flush()
-
+                a=1
         def option4():
-                print('projet_support.option4')
-                sys.stdout.flush()
-
+                a=1
         def option5():
-                print('projet_support.option5')
-                sys.stdout.flush()
-
+                a=1
         def option6():
-                print('projet_support.option6')
-                sys.stdout.flush()
-
+                a=1
         def option7():
-                print('projet_support.option7')
-                sys.stdout.flush()
-
+                a=1
         def option8():
-                print('projet_support.option8')
-                sys.stdout.flush()
-
+                a=1
         def option9():
-                print('projet_support.option9')
-                sys.stdout.flush()
-
+                a=1
         def option10():
-                print('projet_support.option10')
-                sys.stdout.flush()
-
-
+                a=1
 
 
 #------------TKINTER PAGE AUTO GENERATED BUT MODIFIED----------------------------------------------
@@ -484,7 +564,7 @@ class Toplevel1:
         self.titre.configure(highlightbackground="#d9d9d9")
         self.titre.configure(highlightcolor="black")
         self.titre.configure(text='''PROJET EMS RP''')
-        
+
         self.informations = tk.LabelFrame(top)
         self.informations.place(relx=0.016, rely=0.042, relheight=0.052
                 , relwidth=0.968)
@@ -1415,6 +1495,10 @@ class Toplevel1:
         date_time = now.strftime("%d/%m/%y")	
         log("Le " + date_time)
         new()
+        #blink test for detresse
+        blink_circu()
+        blink_neuro()
+        blink_respi()
 
 if __name__ == '__main__':
     vp_start_gui()
