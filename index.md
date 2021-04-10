@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projet EMS RP
-subtitle: Logiciel compagnon pour le rôle-play
+subtitle: Logiciel compagnon pour le rôle-play d'intervention de secours
 ---
 
 ### Origine du projet
@@ -18,7 +18,7 @@ On peut donc l'utiliser dans tous les jeux RP, _GTA 5_, _Arma 3_, _Garry's Mod_,
 
 
 
-![Logiciel](images/preview)
+![Logiciel](https://ems.gyrfalcon.fr/images/preview.png)
 
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
