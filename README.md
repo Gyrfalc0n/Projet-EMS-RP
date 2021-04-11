@@ -2,7 +2,7 @@
 
 # Informations
 
-Lien vers le site avec toutes les informations : [Github Page](https://ems.gyrfalcon.fr)
+Lien vers le site avec toutes les informations : [Site](https://ems.gyrfalcon.fr)
 
 ------
 # Informations techniques
