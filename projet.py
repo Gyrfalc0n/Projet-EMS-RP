@@ -1355,7 +1355,6 @@ class Toplevel1:
         self.option2.configure(activeforeground="#000000")
         self.option2.configure(background="#d9d9d9")
         self.option2.configure(command=option2)
-        self.option2.configure(cursor="fleur")
         self.option2.configure(disabledforeground="#a3a3a3")
         self.option2.configure(foreground="#000000")
         self.option2.configure(highlightbackground="#d9d9d9")
@@ -1480,7 +1479,7 @@ class Toplevel1:
         date_time = now.strftime("%d/%m/%y")	
         log("Le " + date_time)
         new()
-        #blink test for detresse
+        #blink scan for detresse
         blink_circu()
         blink_neuro()
         blink_respi()
