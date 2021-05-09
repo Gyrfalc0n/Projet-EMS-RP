@@ -10,7 +10,7 @@ _Il est possible que votre navigateur vous avertisse avant de télécharger le f
 
 # Télécharger Projet EMS RP
 
-Dernière version (**BETA**) : [Télécharger](https://github.com/Gyrfalc0n/Projet-EMS-RP/releases/download/BETA/Projet.EMS.RP.by.Gyrfalcon.-.BETA.version.exe).
+Dernière version (**BETA**) : [Télécharger](https://github.com/Gyrfalc0n/Projet-EMS-RP/releases/download/v0.2/ProjetEMS-RP.exe).
 
 _Toutes les release (versions)_ : [Release](https://github.com/Gyrfalc0n/Projet-EMS-RP/releases).
 
