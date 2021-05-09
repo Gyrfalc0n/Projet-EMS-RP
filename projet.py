@@ -5,7 +5,7 @@
 #  in conjunction with Tcl version 8.6
 #    Apr 10, 2021 06:06:58 PM CEST  platform: Windows NT
 
-import sys, random, math
+import sys, os, random, math
 from datetime import datetime
 from tkinter import font
 import tkinter.font as tkFont
@@ -13,6 +13,8 @@ from tkinter.constants import DISABLED, SOLID
 from tkinter.scrolledtext import *
 from tkinter import ttk
 from tkinter import scrolledtext
+from pypresence import Presence
+import time
 
 # VARIABLES DE CONFIGURATION
 all_index = 1.0
@@ -32,6 +34,30 @@ is_detresse_circu4 = 0 # TRC
 is_detresse_circu = 0
 is_detresse_neuro = 0
 is_detresse_respi = 0
+
+nombre_victime = 0
+timer = int(time.time())
+
+def get_nombre_victimes():
+        global nombre_victime
+        return "A traité " + str(nombre_victime) + " victimes"
+
+def get_details_message():
+        if is_detresse_circu and not is_detresse_respi and not is_detresse_neuro:
+                message = "Détresse circulatoire"
+                return message
+        elif not is_detresse_circu and is_detresse_respi and not is_detresse_neuro:
+                message = "Détresse respiratoire"
+                return message
+        elif not is_detresse_circu and not is_detresse_respi and is_detresse_neuro:
+                message = "Détresse neurologique"
+                return message
+        if not is_detresse_circu and not is_detresse_respi and not is_detresse_neuro:
+                message = "Aucune détresse vitale"
+        else:
+                message = "Plusieurs détresses vitales"
+        return message
+       
 
 try:
     import Tkinter as tk
@@ -76,8 +102,20 @@ def destroy_Toplevel1():
 
 class Toplevel1:
     def __init__(self, top=None):
+#--------DISCORD RPC----------------------------------------------------------
 
-
+        client_id = "841023891438043136"
+        RPC = Presence(client_id)
+        RPC.connect()
+        buttons_list = [{"label": "Obtenir Projet EMS RP","url": "https://ems.gyrfalcon.fr",}]
+        def update_presence():
+                RPC.update(state=get_nombre_victimes(),
+                           details=get_details_message(),
+                           large_image="logo-min",
+                           large_text="Projet EMS RP v0.2",
+                           start=timer,
+                           buttons=buttons_list)
+                root.after(DELAI, update_presence)
 #-----------------------------------------------------------------------------
         #MES FONCTIONS
         # getters
@@ -470,6 +508,8 @@ class Toplevel1:
                 global is_detresse_circu
                 global is_detresse_neuro
                 global is_detresse_respi
+                global nombre_victime
+                nombre_victime += 1
                 message = "------------------ Nouvelle victime ------------------"
                 log(message)
                 self.tel_entry.delete(0,'end')
@@ -1483,6 +1523,7 @@ class Toplevel1:
         blink_circu()
         blink_neuro()
         blink_respi()
+        update_presence()
 
 if __name__ == '__main__':
     vp_start_gui()
