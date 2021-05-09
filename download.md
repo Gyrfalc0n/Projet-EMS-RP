@@ -24,6 +24,15 @@ Pour comprendre l'importance des mesures données par le logiciel d'un point de 
 
 Historique des versions et des modifications.
 
+### Version BETA 2 (v0.2) (09/05/2021)
+
+```markdown
+- Affichage des détresses vitales clignotant pour plus de visibilité
+- Ajout de 10 boutons d'options de customisation (non configuré pour l'instant)
+- Meilleure efficacité de l'application
+- Amélioration de la stabilité
+```
+
 ### Version BETA (10/04/2021)
 
 ```markdown
