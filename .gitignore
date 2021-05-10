@@ -3,7 +3,7 @@ _site
 .sass-cache
 .vagrant
 
-informlations.html
+informations.html
 
 # general
 .DS_Store
