@@ -36,6 +36,10 @@ Pour rejoindre et faire partie de la communauté, proposer des nouvelles fonctio
 
 -----
 
+[Créer un ticket sur Github](https://github.com/Gyrfalc0n/Projet-EMS-RP/issues)
+
+-----
+
 
 ## Changelog
 
