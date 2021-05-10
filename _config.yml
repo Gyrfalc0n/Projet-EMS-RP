@@ -9,7 +9,7 @@
 title: Projet EMS RP
 
 # Your name to show in the footer
-author: Gyrfalcon
+author: "Gyrfalcon (Discord: Gyrfalcon#1911)"
 
 # --- List of links in the navigation bar --- #
 
@@ -34,7 +34,7 @@ round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
-title-img: /images/title.png
+# title-img: /images/title.png
 
 
 # --- Footer social media links --- #
