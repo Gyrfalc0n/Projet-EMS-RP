@@ -31,6 +31,12 @@ Pour comprendre l'importance des mesures données par le logiciel d'un point de 
 - Amélioration de la précision des données en fonction de la situation
 ```
 
+-----
+Pour rejoindre et faire partie de la communauté, proposer des nouvelles fonctionnalités ou contribuer au projet : Rejoindre le [Discord](https://discord.gg/2K2dzeFSDY)
+
+-----
+
+
 ## Changelog
 
 Historique des versions et des modifications.
