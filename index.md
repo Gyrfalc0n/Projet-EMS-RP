@@ -31,12 +31,6 @@ Pour comprendre l'importance des mesures données par le logiciel d'un point de 
 
 Obtenir _Projet EMS RP_ : [Télécharger](https://ems.gyrfalcon.fr/download).
 
-
------
-
-![Logiciel](https://ems.gyrfalcon.fr/images/demo.gif){: style="float: left"}
-
-
 -----
 Pour rejoindre et faire partie de la communauté : Rejoindre le [Discord](https://discord.gg/2K2dzeFSDY)
 
