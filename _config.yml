@@ -27,7 +27,7 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/ems-red.png"
+avatar: "/assets/img/ems-red.jpg"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
@@ -46,7 +46,7 @@ social-network-links:
   #facebook: deanattali
   github: gyrfalc0n
   #twitter: daattali
-#  discord: gyrfalcon
+discord: Gyrfalcon#1911
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
