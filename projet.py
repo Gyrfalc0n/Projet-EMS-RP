@@ -107,11 +107,11 @@ class Toplevel1:
         client_id = "841023891438043136"
         RPC = Presence(client_id)
         RPC.connect()
-        buttons_list = [{"label": "Obtenir Projet EMS RP","url": "https://ems.gyrfalcon.fr",}]
+        buttons_list = [{"label": "🏥 Projet EMS RP","url": "https://ems.gyrfalcon.fr",}]
         def update_presence():
                 RPC.update(state=get_nombre_victimes(),
                            details=get_details_message(),
-                           large_image="logo-min",
+                           large_image="logo",
                            large_text="Projet EMS RP v0.2",
                            start=timer,
                            buttons=buttons_list)
@@ -573,8 +573,8 @@ class Toplevel1:
         _ana1color = '#d9d9d9' # X11 color: 'gray85'
         _ana2color = '#ececec' # Closest X11 color: 'gray92'
         self.style = ttk.Style()
-        if sys.platform == "win32":
-            self.style.theme_use('winnative')
+        #if sys.platform == "win32":
+        #self.style.theme_use('winnative')
         self.style.configure('.',background=_bgcolor)
         self.style.configure('.',foreground=_fgcolor)
         self.style.configure('.',font="TkDefaultFont")
@@ -612,18 +612,18 @@ class Toplevel1:
         self.informations.configure(highlightbackground="#d9d9d9")
         self.informations.configure(highlightcolor="black")
 
-        self.nouvelle_victime = tk.Button(self.informations)
+        self.nouvelle_victime = ttk.Button(self.informations)
         self.nouvelle_victime.place(relx=0.017, rely=0.42, height=24, width=107
                 , bordermode='ignore')
-        self.nouvelle_victime.configure(activebackground="#ececec")
-        self.nouvelle_victime.configure(activeforeground="#000000")
-        self.nouvelle_victime.configure(background="#d9d9d9")
+        #self.nouvelle_victime.configure(activebackground="#ececec")
+        #self.nouvelle_victime.configure(activeforeground="#000000")
+        #self.nouvelle_victime.configure(background="#d9d9d9")
         self.nouvelle_victime.configure(command=new)
-        self.nouvelle_victime.configure(disabledforeground="#a3a3a3")
-        self.nouvelle_victime.configure(foreground="#000000")
-        self.nouvelle_victime.configure(highlightbackground="#d9d9d9")
-        self.nouvelle_victime.configure(highlightcolor="black")
-        self.nouvelle_victime.configure(pady="0")
+        #self.nouvelle_victime.configure(disabledforeground="#a3a3a3")
+        #self.nouvelle_victime.configure(foreground="#000000")
+        #self.nouvelle_victime.configure(highlightbackground="#d9d9d9")
+        #self.nouvelle_victime.configure(highlightcolor="black")
+        #self.nouvelle_victime.configure(pady="0")
         self.nouvelle_victime.configure(text='''Nouvelle victime''')
 
         self.identite_entry = tk.Entry(self.informations)
@@ -1352,7 +1352,7 @@ class Toplevel1:
         self.Label2.configure(disabledforeground="#a3a3a3")
         self.Label2.configure(font="-family {Segoe UI} -size 9 -slant italic")
         self.Label2.configure(foreground="#000000")
-        self.Label2.configure(text='''Gyrfalcon - version 1.0''')
+        self.Label2.configure(text='''Gyrfalcon - version 0.3''')
 
         self.log = scrolledtext.ScrolledText(top)
         self.log.place(relx=0.016, rely=0.69, relheight=0.259, relwidth=0.628) #628
