@@ -58,6 +58,4 @@ Historique des versions et des modifications.
 ```
 
 -----
-
-Auteur : Gyrfalcon
-Rejoindre le [Discord](https://discord.gg/2K2dzeFSDY)
+Pour rejoindre et faire partie de la communauté, proposer des nouvelles fonctionnalités ou contribuer au projet : Rejoindre le [Discord](https://discord.gg/2K2dzeFSDY)
