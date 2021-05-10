@@ -21,6 +21,16 @@ Pour comprendre l'importance des mesures données par le logiciel d'un point de 
 
 -----
 
+## En cours de développement
+
+```markdown
+- Amélioration du visuel de l'interface
+- Multi-threading des tâches de fond pour de meilleures performances
+- Possibilité de choisir son thème (default, light, dark)
+- Configuration des boutons d'options
+- Amélioration de la précision des données en fonction de la situation
+```
+
 ## Changelog
 
 Historique des versions et des modifications.
