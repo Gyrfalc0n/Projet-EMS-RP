@@ -113,7 +113,7 @@ class Toplevel1:
         client_id = "841023891438043136"
         RPC = Presence(client_id)
         RPC.connect()
-        buttons_list = [{"label": "🏥 Projet EMS RP","url": "https://ems.gyrfalcon.fr",}]
+        buttons_list = [{"label": "🏥 Projet EMS RP","url": "https://ems.gyrfalcon.fr"},{"label": "⛑️ Discord","url": "https://discord.gg/2K2dzeFSDY"}]
         def update_presence():
                 RPC.update(state=get_nombre_victimes(),
                            details=get_details_message(),
