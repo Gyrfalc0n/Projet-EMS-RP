@@ -8,4 +8,4 @@ subtitle: Apprendre et comprendre les informations médicales du logiciel
 
 
 -----
-Rejoindre le [Discord](https://discord.gg/2K2dzeFSDY))
+Rejoindre le [Discord](https://discord.gg/2K2dzeFSDY)

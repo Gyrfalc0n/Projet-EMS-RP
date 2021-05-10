@@ -50,4 +50,4 @@ Historique des versions et des modifications.
 -----
 
 Auteur : Gyrfalcon
-Rejoindre le [Discord](https://discord.gg/2K2dzeFSDY))
+Rejoindre le [Discord](https://discord.gg/2K2dzeFSDY)
