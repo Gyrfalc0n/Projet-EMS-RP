@@ -3,6 +3,8 @@ _site
 .sass-cache
 .vagrant
 
+informlations.html
+
 # general
 .DS_Store
 Thumbs.db
