@@ -502,8 +502,9 @@ class Toplevel1:
                         
                 if tel != "":
                         message = message + " \t\t | \t\t" + "Téléphone : " + tel
-                bilan_infos()
                 log(message)
+                bilan_infos()
+                
 
         def envoyer_log():
                 message = self.entry_log.get()
