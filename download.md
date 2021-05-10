@@ -18,6 +18,7 @@ _Toutes les release (versions)_ : [Release](https://github.com/Gyrfalc0n/Projet-
 
 Pour comprendre l'importance des mesures données par le logiciel d'un point de vue médical, et apprendre à utiliser le logiciel ainsi que son fonctionnement : [Informations](https://ems.gyrfalcon.fr/informations).
 
+
 -----
 
 ## Changelog
@@ -45,3 +46,8 @@ Historique des versions et des modifications.
 - Indicateur de détresses vitales
 - Journalisation des résultats
 ```
+
+-----
+
+Auteur : Gyrfalcon
+Rejoindre le [Discord](https://discord.gg/2K2dzeFSDY))
