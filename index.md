@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Projet EMS RP
 subtitle: Logiciel compagnon pour le rôle-play d'intervention de secours
 ---
