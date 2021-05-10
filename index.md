@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: post
 title: Projet EMS RP
 subtitle: Logiciel compagnon pour le rôle-play d'intervention de secours
 ---
@@ -30,6 +30,12 @@ Par exemple, une plaie par balle aura plus de chance d'influer sur les informati
 Pour comprendre l'importance des mesures données par le logiciel d'un point de vue médical, et apprendre à utiliser le logiciel ainsi que son fonctionnement : [Informations](https://ems.gyrfalcon.fr/informations).
 
 Obtenir _Projet EMS RP_ : [Télécharger](https://ems.gyrfalcon.fr/download).
+
+
+-----
+
+![Logiciel](https://ems.gyrfalcon.fr/images/demo.gif){: style="float: left"}
+
 
 -----
 Pour rejoindre et faire partie de la communauté : Rejoindre le [Discord](https://discord.gg/2K2dzeFSDY)
