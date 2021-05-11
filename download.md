@@ -10,7 +10,7 @@ _Il est possible que votre navigateur vous avertisse avant de télécharger le f
 
 # Télécharger Projet EMS RP
 
-Dernière version (**BETA**) : [Télécharger](https://github.com/Gyrfalc0n/Projet-EMS-RP/releases/download/v0.2/ProjetEMS-RP.exe).
+Dernière version (**BETA**) : [Télécharger](https://github.com/Gyrfalc0n/Projet-EMS-RP/releases/download/v0.3/ProjetEMS-RP.exe).
 
 _Toutes les release (versions)_ : [Release](https://github.com/Gyrfalc0n/Projet-EMS-RP/releases).
 
@@ -24,7 +24,6 @@ Pour comprendre l'importance des mesures données par le logiciel d'un point de 
 ## En cours de développement
 
 ```markdown
-- Amélioration du visuel de l'interface
 - Multi-threading des tâches de fond pour de meilleures performances
 - Possibilité de choisir son thème (default, light, dark)
 - Configuration des boutons d'options
@@ -44,6 +43,16 @@ Pour rejoindre et faire partie de la communauté, proposer des nouvelles fonctio
 ## Changelog
 
 Historique des versions et des modifications.
+
+### Version BETA 3 (v0.3) (11/05/2021)
+
+```markdown
+- Changement du design de certains éléments, plus modernes
+- Préparation de la venue des thèmes
+- Ajout du support de Discord Rich Presence (affichage sur votre profil Discord avec le nombre de victimes et leur état)
+- Ajout des icônes d'application
+- Ajout des détails dans l'application
+```
 
 ### Version BETA 2 (v0.2) (09/05/2021)
 
