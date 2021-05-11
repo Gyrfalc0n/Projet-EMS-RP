@@ -1,0 +1,1 @@
+verpatch.exe dist\ProjetEMS-RP.exe 0.3 /va /pv 0.3 /s description "Compagnon de role-play medical" /s product "Projet EMS RP" /s copyright "Gyrfalcon, 2021" /s company "Gyrfalc0n"

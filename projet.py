@@ -27,6 +27,11 @@ large_size = 10
 font_default = (default_font, default_size)
 font_large = (default_font, large_size)
 
+def resource_path(relative_path):
+        if hasattr(sys, '_MEIPASS'):
+            return os.path.join(sys._MEIPASS, relative_path)
+        return os.path.join(os.path.abspath("."), relative_path)
+
 # VARIABLES DE FONCTIONNEMENT
 is_detresse_respi1 = 0 # respirer
 is_detresse_respi2 = 0 # sat
@@ -591,6 +596,8 @@ class Toplevel1:
         '''This class configures and populates the toplevel window.
            top is the toplevel containing window.'''
            
+        root.iconbitmap(resource_path('ems.ico'))
+        
         _bgcolor = active_background  # X11 color: 'gray85' '#d9d9d9'
         _fgcolor = active_foreground  # X11 color: 'black'
         

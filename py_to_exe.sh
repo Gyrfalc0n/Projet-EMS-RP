@@ -1,2 +1,3 @@
-pyinstaller --onefile --noconsole projet.py
-mv dist/projet.exe dist/ProjetEMS-RP.exe
+rm dist/ProjetEMS-RP.exe
+pyinstaller --onefile --name ProjetEMS-RP --icon=ems.ico --noconsole --add-data "ems.ico;." projet.py
+start version.bat
