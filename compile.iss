@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Projet EMS RP"
-#define MyAppVersion "BETA v0.31"
+#define MyAppVersion "BETA v0.3"
 #define MyAppPublisher "Gyrfalcon"
 #define MyAppExeName "ProjetEMS-RP.exe"
 
@@ -19,7 +19,7 @@ DisableProgramGroupPage=yes
 LicenseFile=E:\Projet EMS RP\Projet-EMS-RP\LICENSE
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
-OutputBaseFilename=Projet_EMS_RP_v0.2
+OutputBaseFilename=ProjetEMS-RP_Installer
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
