@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Projet EMS RP"
-#define MyAppVersion "BETA v0.2"
+#define MyAppVersion "BETA v0.31"
 #define MyAppPublisher "Gyrfalcon"
 #define MyAppExeName "ProjetEMS-RP.exe"
 
