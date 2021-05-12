@@ -4,7 +4,9 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+![GitHub last commit](https://img.shields.io/github/last-commit/Gyrfalc0n/Projet-EMS-RP?style=for-the-badge)
 [![MIT License][license-shield]][license-url]
+
   </p>
 
 <!-- PROJECT LOGO -->
