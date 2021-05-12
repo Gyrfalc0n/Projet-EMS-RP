@@ -20,6 +20,8 @@
     Compagnon de rôle-play d'intervention de secours
     <br />
     <a href="https://ems.gyrfalcon.fr"><strong>Toutes les informations</strong></a>
+  ·
+  <a href="https://discord.gg/2K2dzeFSDY"><strong>Discord</strong></a>
     <br />
     <br />
     <a href="https://github.com/Gyrfalc0n/Projet-EMS-RP/issues">Rapporter un bug</a>
