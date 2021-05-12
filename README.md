@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/Gyrfalc0n/Projet-EMS-RP">
     <img src="images/ems.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -19,12 +19,12 @@
   <p align="center">
     Compagnon de rôle-play d'intervention de secours
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Toutes les informations</strong></a>
+    <a href="https://ems.gyrfalcon.fr"><strong>Toutes les informations</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name/issues">Rapporter un bug</a>
+    <a href="https://github.com/Gyrfalc0n/Projet-EMS-RP/issues">Rapporter un bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Demander des ajouts de features</a>
+    <a href="https://github.com/Gyrfalc0n/Projet-EMS-RP/issues">Demander des ajouts de features</a>
   </p>
 </p>
 
