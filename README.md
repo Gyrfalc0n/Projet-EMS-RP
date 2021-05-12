@@ -28,6 +28,12 @@
   </p>
 </p>
 
+<p align="center"
+ <a href="https://github.com/Gyrfalc0n/Projet-EMS-RP">
+<img src="https://github.com/Gyrfalc0n/Projet-EMS-RP/blob/main/images/demo.gif" alt="Presentation" width="500" height="800">
+    </a>
+</p>
+
 # Informations
 
 Lien vers le site avec toutes les informations : [https://ems.gyrfalcon.fr](https://ems.gyrfalcon.fr)
