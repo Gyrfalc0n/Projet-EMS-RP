@@ -16,7 +16,7 @@
     <img src="images/ems.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Projet EMS-RP</h3>
+  <h1 align="center">Projet EMS-RP</h1>
 
   <p align="center">
     Compagnon de rôle-play d'intervention de secours
