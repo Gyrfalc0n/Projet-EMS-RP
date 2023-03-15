@@ -4,6 +4,10 @@ title: Projet EMS RP
 subtitle: Logiciel compagnon pour le rôle-play d'intervention de secours
 ---
 
+**CE PROJET A ÉTÉ REMPLACÉ par une version entièrement refaite en navigateur web, avec de meilleures fonctionnalités. Le nouveau site pour accéder à l'outil est accessible ici** : [emsrp.fr](https://emsrp.fr)
+
+-----
+
 _Projet EMS RP_ est un projet _open-source_ développé par Gyrfalcon dont l'objectif est d'être utilisé comme aide médicale pour tous les types de rôle-play contenant des interventions d'urgence.
 
 -----
